@@ -1,4 +1,4 @@
-# webik_Dobler_ET302
+# Webik_Dobler_ET302
 Practical work with landing page hosting on Wordpress
 ## The result of the first task
 I've mastered Figma: creating an account, working with the interface. He developed a corporate identity: he created 3 variants of a scalable logo, selected a font system (text, header, accidental) and a color palette based on color harmony. I have created a ready-made project in Figma on TK.
