@@ -1,0 +1,5 @@
+Typesetting and header font:Caesar Dressing Cyrillic
+Path: C:\Users\шурик\Desktop\web_code\dob1\Materials\Fonts\caesar-dressing-cyrillic.otf
+
+The font is accidental:Noto Sans Mono
+Path: C:\Users\шурик\Desktop\web_code\dob1\Materials\Fonts\NotoSansMono-VariableFont_wdth,wght.ttf

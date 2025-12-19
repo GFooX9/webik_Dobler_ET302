@@ -1,0 +1,498 @@
+/* Локальные шрифты */
+@font-face {
+    font-family: 'Caesar Dressing';
+    src: url('Materials/Fonts/caesar-dressing-cyrillic.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Mono';
+    src: url('Materials/Fonts/NotoSansMono-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* Переменные и общие стили */
+:root {
+    --bg-top: #e8e2d2; /* Светлый беж */
+    --bg-mid: #93a38e; /* Шалфей */
+    --bg-bot: #C97B5D; /* Медный/Глина (низ градиента последнего экрана) */
+    --dark-blue: #4A5B6D; /* Верх градиента последнего экрана */
+    --text-color: #1a1a1a;
+    --font-head: 'Caesar Dressing', cursive;
+    --font-body: 'Noto Sans Mono', monospace;
+    --btn-black: #111;
+}
+
+body {
+    /* Создаем длинный градиент на всю страницу */
+    background: linear-gradient(180deg, 
+        var(--bg-top) 0%, 
+        var(--bg-top) 25%, 
+        var(--bg-mid) 45%, 
+        var(--bg-mid) 60%,
+        var(--dark-blue) 70%,  /* начало градиента последнего экрана (#4A5B6D) */
+        var(--bg-bot) 100%);   /* низ последнего экрана (#C97B5D) */
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .section-badge, .btn, .navbar-brand {
+    font-family: var(--font-head);
+    text-transform: uppercase;
+}
+
+/* Navbar */
+.custom-nav {
+    padding: 15px 0;
+    transition: background 0.3s;
+}
+
+.wolf-logo {
+    padding: 0;
+}
+
+.wolf-logo-img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+.btn-pill {
+    background: black;
+    color: white !important;
+    border-radius: 20px;
+    padding: 10px 26px !important;
+    margin: 0 5px;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn-pill {
+    font-family: var(--font-head);
+}
+
+.btn-pill:hover {
+    transform: scale(1.05);
+    background: #333;
+}
+
+.social-icon {
+    padding: 0 !important;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.header-vk-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 80vh;
+    padding-top: 80px;
+}
+
+.main-title {
+    font-size: 12rem;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    /* Стиль "рукописности" */
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.wolf-composition {
+    position: relative;
+}
+
+.wolf-composition .col-3:first-child {
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wolf-composition .col-md-4 {
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wolf-composition .col-3:last-child {
+    padding-left: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wolf-silhouette {
+    opacity: 0.9;
+    max-height: 1200px;
+}
+
+.flip-h {
+    transform: scaleX(-1);
+}
+
+
+/* Кнопка предзаказа */
+.btn-main-cta {
+    background: black;
+    color: white;
+    padding: 20px 50px;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    line-height: 1.2;
+    transition: all 0.2s;
+    margin-top: 100px;
+}
+
+.btn-main-cta:hover {
+    background: black;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+/* Section Badges */
+.section-badge {
+    display: inline-block;
+    border: 4px solid black;
+    padding: 10px 40px;
+    font-size: 2rem;
+    border-radius: 23px;
+    background: transparent;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.dark-badge {
+    background: transparent;
+    color: #fff;
+    border-color: #1a1a1a;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* About Icons */
+.icon-frame {
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Блоки "О ИГРЕ", "ГАЛЕРЕЯ", "КОМАНДА" — делаем основной текст чуть темнее */
+.about-section,
+.gallery-section,
+.team-section {
+    color: #111111;
+}
+
+/* Gallery */
+.gallery-card {
+    border: 4px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+/* Team Section */
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-wrapper img {
+    border: 3px solid black;
+    background: #f0e6d2;
+    margin-bottom: -20px; /* Наложение на карточку */
+    position: relative;
+    z-index: 2;
+}
+
+.role-box {
+    background: #fdf5e6;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 30px 15px 15px;
+    width: 100%;
+    position: relative;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.role-box.dark-mode {
+    background: #5b7466; /* Темно-зеленый для менеджера */
+    color: white;
+}
+
+.role-title {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.role-desc {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    background: rgba(0,0,0,0.05);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon-bottom {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Preorder Form */
+.form-container {
+    background: transparent;
+    padding: 40px; /* Увеличил отступы */
+    border: 4px solid black;
+    border-radius: 30px;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
+}
+
+/* Стилизация инпутов под "нарисованные" */
+.input-group-custom {
+    position: relative;
+}
+
+.input-group-custom .form-control {
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 12px 40px 12px 45px;
+    background: #fffdf5;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.input-clear {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.captcha-area {
+    color: black;
+}
+
+.btn-submit {
+    background: black;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    border: 2px solid white; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.btn-submit:hover {
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+.btn-support-small {
+    background: black;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-family: var(--font-head);
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: all 0.2s;
+}
+
+.btn-support-small:hover {
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+/* Support Modal */
+.support-modal-content {
+    background: #ece3d4; /* Бежевый фон как на макете */
+    border: 3px solid black;
+    border-radius: 30px;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.2);
+}
+
+.custom-textarea {
+    border: 3px solid black;
+    border-radius: 15px;
+    background: #ece3d4; /* Такой же как фон */
+    resize: none;
+}
+
+.btn-icon-round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background: transparent;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-icon-round:hover {
+    background: black;
+    color: white;
+}
+
+/* Footer */
+.main-footer {
+    border-top: 2px solid black;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.border-box {
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer .border-box {
+    border: none; /* Убираем обводку логотипа компании в подвале */
+}
+
+.about-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Caesar Dressing', cursive;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+}
+
+.about-circle span {
+    display: block;
+    text-align: center;
+}
+
+.social-circle {
+    width: 64px;
+    height: 64px;
+    background: transparent;
+    border: none; /* Убираем обводку кружков соцсетей */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.hk-logo img {
+    max-height: 110px; /* логотип компании ещё больше */
+    width: auto;
+    display: block;
+}
+
+.footer-wolf-logo img {
+    max-height: 60px; /* логотип игры меньше */
+    width: auto;
+    display: block;
+}
+
+.social-circle img {
+    max-width: 85%;
+    max-height: 85%;
+    display: block;
+}
+
+.social-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Адаптив шрифтов */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 5rem;
+    }
+    .wolf-silhouette {
+        display: none; /* Скрываем волков на мобильном, если мешают, или уменьшаем */
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .btn-main-cta {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-main-cta {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+}
