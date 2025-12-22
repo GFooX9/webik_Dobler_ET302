@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOLF - Narrative Drama Game</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (для иконок) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand wolf-logo" href="#">
+                <img src="Materials/Icons for futter and header/Logo game.svg" alt="Логотип игры WOLF" class="wolf-logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link btn-pill" href="#about">О ИГРЕ</a></li>
+                    <li class="nav-item"><a class="nav-link btn-pill" href="#gallery">ГАЛЕРЕЯ</a></li>
+                    <li class="nav-item"><a class="nav-link btn-pill" href="#team">КОМАНДА</a></li>
+                    <li class="nav-item"><a class="nav-link btn-pill" href="#" data-bs-toggle="modal" data-bs-target="#supportModal">ПОДДЕРЖКА</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link social-icon" href="#" aria-label="VK">
+                            <img src="Materials/Icons for futter and header/Vk.svg" alt="VK" class="header-vk-logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <!-- Маленький волк для версий lg, md, sm, xs -->
+            <div class="small-wolf-above-title d-block d-xl-none">
+                <img src="Materials/Window hero/Small Wolf.svg" alt="Small Wolf" class="small-wolf-icon">
+            </div>
+            <h1 class="main-title">WOLF</h1>
+            
+            <div class="row align-items-center justify-content-center wolf-composition">
+                <!-- Два больших волка только для xxl и xl -->
+                <div class="col-3 d-none d-xl-block">
+                    <img src="Materials/Window hero/wolf.svg" alt="Wolf Left" class="img-fluid wolf-silhouette">
+                </div>
+                
+                <div class="col-12 col-xl-4">
+                    <button class="btn btn-main-cta" onclick="document.getElementById('preorder').scrollIntoView({behavior: 'smooth'})">
+                        ОФОРМИТЬ<br>ПРЕДЗАКАЗ
+                    </button>
+                </div>
+
+                <div class="col-3 d-none d-xl-block">
+                    <img src="Materials/Window hero/wolf.svg" alt="Wolf Right" class="img-fluid wolf-silhouette flip-h">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-badge">О ИГРЕ</div>
+            </div>
+            
+            <!-- Вариант 1: Для больших мониторов (xxl, xl) -->
+            <div class="d-none d-xl-block">
+                <!-- Первый абзац: текст слева, картина справа -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-xl-6">
+                        <p class="story-text text-center">
+                            Wolf — это повествовательная драма от студии HotKeysGames, которая переносит на игровой холст мрачный и пронзительный литературный мир.
+                            История игры рождается из страниц культовой серии книг «Unhappy stories» российского писателя Александра Доблера. 
+                            Мы бережно сохранили уникальную атмосферу его прозы — гнетущее очарование юга Европы, психологическую глубину персонажей и философское осмысление хрупкости человеческих судеб.
+                        </p>
+                    </div>
+                    <div class="col-xl-6 text-center">
+                        <img src="Materials/Block about/картина 1.jpg" alt="Картина 1" class="img-fluid about-image">
+                    </div>
+                </div>
+
+                <!-- Второй абзац: картина слева, текст справа -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-xl-6 order-xl-2">
+                        <p class="story-text text-center">
+                            Действие разворачивается в вымышленной стране на юге Европы в середине XX века. 
+                            Время, когда старый мир трещит по швам, а новый еще не родился. 
+                            Здесь, под палящим солнцем и в тени старых вилл, начинается взросление юного героя. 
+                            Его первые шаги во взрослую жизнь неожиданно становятся шагами в лабиринт прошлого — прошлого его родителей, полного болезненных тайн, невысказанных обид и решений, которые отзываются эхом спустя десятилетия.
+                        </p>
+                    </div>
+                    <div class="col-xl-6 order-xl-1 text-center">
+                        <img src="Materials/Block about/Картина 2.jpg" alt="Картина 2" class="img-fluid about-image">
+                    </div>
+                </div>
+
+                <!-- Третий абзац: текст слева, картина справа -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-xl-6">
+                        <p class="story-text text-center">
+                            Игрокам предстоит не просто пройти сюжет, а распутать сложнейший клубок из множества человеческих историй. 
+                            Каждый новый знакомый, каждая найденная записка, каждый полунамёк в разговоре — это нить, которая может привести как к прозрению, так и к новой ловушке. Судьбы родителей, их любовь, предательство, надежды и страх сплетаются с собственной жизнью героя, заставляя его задавать главные вопросы: Кто мы — продолжатели судеб наших родителей или заложники их ошибок? 
+                            Можно ли разорвать порочный круг, если его истоки скрыты во тьме прошлого?
+                        </p>
+                    </div>
+                    <div class="col-xl-6 text-center">
+                        <img src="Materials/Block about/картина 3.jpg" alt="Картина 3" class="img-fluid about-image">
+                    </div>
+                </div>
+
+                <!-- Волки снизу -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <img src="Materials/Block about/волки.png" alt="Волки" class="img-fluid about-wolves">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вариант 2: Для ноутбуков и планшетов (lg, md) -->
+            <div class="d-none d-lg-block d-xl-none">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-10">
+                        <p class="story-text text-center">
+                            Игра "Wolf" была создана компанией HotKeysGames по мотивам серии книг Unhappy stories, автором которой является российский писатель Доблер Александр. 
+                            Игра рассказывает историю происходящую в вымышленной стране на юге Европы 20 века, где подросток начинает взрослую жизнь, которая тесно переплетается с прошлым его родителей. 
+                            По ходу игры, с развитием сюжета игрокам предстоит распутать клубок, сплетенный из множества человеческих историй.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-4 mt-4">
+                    <div class="col-md-4">
+                        <img src="Materials/Block about/картина 1.jpg" alt="Картина 1" class="img-fluid about-image-small">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="Materials/Block about/Картина 2.jpg" alt="Картина 2" class="img-fluid about-image-small">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="Materials/Block about/картина 3.jpg" alt="Картина 3" class="img-fluid about-image-small">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Вариант 3: Для небольших планшетов и телефонов (xs, sm) -->
+            <div class="d-block d-lg-none">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12">
+                        <p class="story-text text-center">
+                            Игра "Wolf" была создана компанией HotKeysGames по мотивам серии книг Unhappy stories, автором которой является российский писатель Доблер Александр. 
+                            Игра рассказывает историю происходящую в вымышленной стране на юге Европы 20 века, где подросток начинает взрослую жизнь, которая тесно переплетается с прошлым его родителей. 
+                            По ходу игры, с развитием сюжета игрокам предстоит распутать клубок, сплетенный из множества человеческих историй.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <img src="Materials/Block about/волки.png" alt="Волки" class="img-fluid about-wolves">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container text-center">
+            <div class="section-badge mb-5">ГАЛЕРЕЯ</div>
+            <!-- Текст для больших экранов (lg и выше) -->
+            <p class="mb-5 section-desc d-none d-lg-block">Иногда стоит остановиться, чтобы увидеть всё великолепие этого мира. 
+                Мы представляем наброски из нашей галереи, которые в будущем будут реализованы. 
+                Здесь собраны все арты, концепты, персонажи и воспоминания, которые вам удалось открыть по ходу игры. 
+                Исследуйте разделы, чтобы увидеть детали мира, узнать больше о героях и пережить ключевые моменты истории снова. 
+                Некоторые элементы скрыты — чтобы их найти, понадобится внимание и смекалка. Собирайте коллекцию полностью!</p>
+            <!-- Текст для маленьких экранов (меньше lg) -->
+            <p class="mb-5 section-desc d-block d-lg-none">Иногда стоит остановиться, чтобы увидеть всё великолепие этого мира. 
+                Мы представляем наброски из нашей галереи, которые в будущем будут реализованы. 
+                Здесь собраны все арты, концепты, персонажи и воспоминания, которые вы откроете по ходу игры.</p>
+
+            <div class="gallery-scroll-container">
+                <div class="gallery-scroll">
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 1.jpg" alt="Картина 1" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 2.jpg" alt="Картина 2" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 3.jpg" alt="Картина 3" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 4.jpg" alt="Картина 4" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 5.jpg" alt="Картина 5" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 6.jpg" alt="Картина 6" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 7.jpg" alt="Картина 7" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 8.jpg" alt="Картина 8" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 9.jpg" alt="Картина 9" class="img-fluid">
+                    </div>
+                    <div class="gallery-card">
+                        <img src="Materials/Gallery/Картина 10.jpg" alt="Картина 10" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section py-5">
+        <div class="container text-center">
+            <div class="section-badge mb-5">КОМАНДА</div>
+            <p class="mb-5 section-desc">Создание игры — это история о том, как разные люди с разными навыками объединяются ради общей цели: подарить миру новые эмоции, новые миры и новые приключения. 
+                Команда — это и есть настоящая магия геймдева.</p>
+
+            <div class="team-scroll-container">
+                <div class="team-scroll">
+                    <!-- Member 1: Анна novik -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper avatar-novik">
+                            <img src="Materials/Team/1 Анна novik/анна novik.jpg" alt="Анна novik" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box role-box-novik">
+                            <div class="role-title">ВЕДУЩИЙ<br>ГЕЙМДИЗАЙНЕР</div>
+                            <h4 class="member-name">АННА "NOVIK"</h4>
+                            <p class="role-desc">Создает различные модели, отвечает за персонажей</p>
+                            <p class="quote">«Сначала — силуэт. Если он читается, модель будет работать в любой игре»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/1 Анна novik/ico novik.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 2: Алексей blackbr -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper">
+                            <img src="Materials/Team/2 Алексей blackbr/алексей blackbr.jpg" alt="Алексей blackbr" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box">
+                            <div class="role-title">ПРОГРАММИСТ</div>
+                            <h4 class="member-name">АЛЕКСЕЙ "BLACKBR"</h4>
+                            <p class="role-desc">Интегрирует модели, создает оформления, "кожа"</p>
+                            <p class="quote">«Производительность— это не оптимизация, это образ мышления»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/2 Алексей blackbr/ico blackbr.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 3: Ирина lottablk -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper avatar-lottablk">
+                            <img src="Materials/Team/3 Ирина lottablk/ирина lottablk.jpg" alt="Ирина lottablk" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box role-box-lottablk">
+                            <div class="role-title">PROJECT<br>MANAGER</div>
+                            <h4 class="member-name">ИРИНА "LOTTABLE"</h4>
+                            <p class="role-desc">Распределяет дедлайны работы, следит за продвижением работы</p>
+                            <p class="quote">«Я как пожарный, который бегает с канистрой бензина и огнетушителем одновременно»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/3 Ирина lottablk/ico lottablk.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 4: Елизавета haku -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper">
+                            <img src="Materials/Team/4 Елизавета haku/елизавета haku.jpg" alt="Елизавета haku" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box">
+                            <div class="role-title">ИГРОВОЙ<br>СЦЕНАРИСТ</div>
+                            <h4 class="member-name">ЕЛИЗАВЕТА "HAKU"</h4>
+                            <p class="role-desc">Планирует для вас игровой сценарий и окружение персонажей</p>
+                            <p class="quote">«Сегодня пишем "плохо".Завтра перепишем "хорошо".Главное — чтобы был каркас»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/4 Елизавета haku/ico Haku.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 5: Александр x_9 -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper">
+                            <img src="Materials/Team/5 Александр x_9/александр x_9.jpg" alt="Александр x_9" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box">
+                            <div class="role-title">TEAM LEADER</div>
+                            <h4 class="member-name">АЛЕКСАНДР "X_9"</h4>
+                            <p class="role-desc">Пишет историю...Основатель компании HotKeysGames</p>
+                            <p class="quote">«Игрок — мой соавтор.Его любопытство — мой сюжет, а его решения — мои повороты»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/5 Александр x_9/ico X_9.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 6: Вячеслав step -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper avatar-step">
+                            <img src="Materials/Team/6 Вячеслав step/вячеслав step.jpg" alt="Вячеслав step" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box role-box-step">
+                            <div class="role-title">ПРОГРАММИСТ</div>
+                            <h4 class="member-name">ВЯЧЕСЛАВ "STEP"</h4>
+                            <p class="role-desc">Реализацует сцены и работает с движениями, "скелет"</p>
+                            <p class="quote">«Сильно связанный код пахнет. И пахнет не свежими булочками(»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/6 Вячеслав step/ico step.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 7: Роман rict -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper avatar-rict">
+                            <img src="Materials/Team/7 Роман rict/роман rict.jpg" alt="Роман rict" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box role-box-rict">
+                            <div class="role-title">ВЕДУЩИЙ<br>ПРОГРАММИСТ</div>
+                            <h4 class="member-name">РОМАН "RICT"</h4>
+                            <p class="role-desc">Отвечает за работоспособность игры и людей)</p>
+                            <p class="quote">«Производительность — это не оптимизация, это образ мышления»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/7 Роман rict/ico rict.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Member 8: Анна luka -->
+                    <div class="team-member-card">
+                        <div class="avatar-wrapper avatar-luka">
+                            <img src="Materials/Team/8 Анна luka/анна luka.jpg" alt="Анна luka" class="avatar-rounded-square img-fluid">
+                        </div>
+                        <div class="role-box role-box-luka">
+                            <div class="role-title">ГЕЙМДИЗАЙНЕР</div>
+                            <h4 class="member-name">АННА "LUKA"</h4>
+                            <p class="role-desc">Созданет различные модели, отвечает за интерьер</p>
+                            <p class="quote">«Я переводчик: превращаю концепт в живую, осязаемую вещь»</p>
+                            <div class="icon-bottom">
+                                <img src="Materials/Team/8 Анна luka/ico luka.svg" alt="Icon" class="team-icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preorder Form Section -->
+    <section id="preorder" class="preorder-section py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="section-badge dark-badge">ФОРМА ПРЕДЗАКАЗА</div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <div class="form-container">
+                        <form id="orderForm">
+                            <div class="mb-3 input-group-custom">
+                                <span class="input-icon"><i class="fa-regular fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Введите ваше ФИО:" required>
+                                <span class="input-clear">&times;</span>
+                            </div>
+
+                            <div class="mb-3 input-group-custom">
+                                <span class="input-icon"><i class="fa-solid fa-at"></i></span>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Введите вашу почту:" required>
+                                <span class="input-clear">&times;</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="input-group-custom">
+                                    <span class="input-icon"><i class="fa-solid fa-check"></i></span>
+                                    <input type="email" id="emailConfirm" name="emailConfirm" class="form-control" placeholder="Подтвердите верность вашей почты:" required>
+                                    <span class="input-clear">&times;</span>
+                                </div>
+                                <div class="invalid-feedback" style="display: none;">
+                                    Почты не совпадают
+                                </div>
+                            </div>
+
+                            <!-- Captcha Area -->
+                            <div class="captcha-area d-flex align-items-center justify-content-between mt-4">
+                                <img src="Materials/Window hero/Small Wolf.svg" alt="Wolf" class="captcha-wolf-icon">
+                                <div class="captcha-box text-center">
+                                    <div class="captcha-img mb-2" style="background: #ddd; height: 40px; width: 100px; margin: 0 auto;"></div>
+                                    <input type="text" class="form-control text-center" placeholder="Введите код" required>
+                                </div>
+                                <img src="Materials/Window hero/Small Wolf.svg" alt="Wolf" class="captcha-wolf-icon flip-horizontal">
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-submit">ОТПРАВИТЬ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 footer-help-text">
+                <small>Если у вас возникли проблемы с оформлением предзаказа или вопросы, то можете обратиться к нам за помощью, стая никогда не отвернется от сородича, АУУУУУУУУУУФФ</small>
+                <div class="mt-3">
+                    <button class="btn btn-support-small" data-bs-toggle="modal" data-bs-target="#supportModal">ПОДДЕРЖКА</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="logos mb-3 mb-md-0 d-flex align-items-center gap-3">
+                <!-- Логотип компании -->
+                <div class="hk-logo border-box">
+                    <img src="Materials/Icons for futter and header/Logo company.svg" alt="Логотип компании HotKeysGames">
+                </div>
+                <!-- Логотип игры -->
+                <div class="footer-wolf-logo">
+                    <img src="Materials/Icons for futter and header/Logo game.svg" alt="Логотип игры WOLF">
+                </div>
+            </div>
+            
+            <div class="socials d-flex gap-3">
+                <div class="about-circle">
+                    <span>О НАС:</span>
+                </div>
+                <a href="#" class="social-circle" aria-label="VK">
+                    <img src="Materials/Icons for futter and header/Vk.svg" alt="VK">
+                </a>
+                <a href="#" class="social-circle" aria-label="Discord">
+                    <img src="Materials/Icons for futter and header/Discord.svg" alt="Discord">
+                </a>
+                <a href="#" class="social-circle" aria-label="Steam">
+                    <img src="Materials/Icons for futter and header/steam.svg" alt="Steam">
+                </a>
+                <a href="#" class="social-circle" aria-label="Facebook">
+                    <img src="Materials/Icons for futter and header/facebook.svg" alt="Facebook">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Support Modal (реализация последнего фрейма) -->
+    <div class="modal fade" id="supportModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content support-modal-content">
+                <div class="modal-body p-4">
+                    <form id="supportForm">
+                        <div class="mb-3 input-group-custom">
+                            <span class="input-icon"><i class="fa-regular fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Введите ваше ФИО:" required>
+                            <span class="input-clear">&times;</span>
+                        </div>
+                        <div class="mb-3 input-group-custom">
+                            <span class="input-icon"><i class="fa-solid fa-at"></i></span>
+                            <input type="email" class="form-control" placeholder="Введите вашу почту:" required>
+                            <span class="input-clear">&times;</span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="mb-2">Опишите вашу проблему или задайте вопрос:</label>
+                            <textarea class="form-control custom-textarea" rows="5" placeholder="Ваш текст" required></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button type="button" class="btn btn-icon-round" data-bs-dismiss="modal">
+                                <img src="Materials/Icons for form/Undo.svg" alt="Назад" class="form-icon">
+                            </button>
+                            <button type="submit" class="btn btn-icon-round">
+                                <img src="Materials/Icons for form/To send.svg" alt="Отправить" class="form-icon">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS + Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
