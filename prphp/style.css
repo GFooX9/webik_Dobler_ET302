@@ -1,0 +1,231 @@
+/*
+Theme Name: АНИЧ Theme
+Theme URI:
+Author: АНИЧ
+Author URI:
+Description: Тема для сайта Ассоциации Настольных Игр Челябинска (АНИЧ)
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: anich-theme
+Tags: board-games, events, responsive, custom-menu
+*/
+
+/* Основные стили */
+:root {
+    --primary-color: #26CB52;
+    --accent-color: #B1DDBD;
+    --bg-light: #F1F1F1;
+    --bg-white: #FFFFFF;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: 'Neucha', cursive;
+    color: var(--text-dark);
+    padding-top: 76px; /* Отступ для фиксированной навигации */
+    background-color: var(--bg-light);
+}
+
+h1, h2, h3, h4, .navbar-brand-text {
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 600;
+}
+
+.btn {
+    font-family: 'Play', sans-serif;
+}
+
+/* Навигация */
+.navbar {
+    background-color: var(--bg-white) !important;
+}
+
+.navbar-brand-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Главный баннер */
+.main-banner {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-banner .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Секции */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.events-section {
+    background-color: var(--accent-color);
+}
+
+/* Карточки */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    background-color: var(--bg-white);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-family: 'Alumni Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* Изображения */
+.game-image, .event-image, .gallery-image {
+    transition: transform 0.3s ease;
+    border-radius: 15px 15px 0 0;
+}
+
+.game-image:hover, .event-image:hover, .gallery-image:hover {
+    transform: scale(1.1);
+}
+
+.card-img-top {
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.gallery-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px !important;
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1daa42;
+    border-color: #1daa42;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(38, 203, 82, 0.3);
+}
+
+.btn-event {
+    margin-top: auto;
+}
+
+/* Эффект нажатия кнопки */
+.btn:active {
+    transform: scale(0.9) !important;
+}
+
+/* Футер */
+footer {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.footer-subtitle {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-banner {
+        height: 50vh;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .gallery-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-banner {
+        height: 40vh;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    body {
+        padding-top: 56px;
+    }
+}
+
